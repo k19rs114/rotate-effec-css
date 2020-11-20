@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học lại jquery</title>
+</head>
+
+<body>
+    <style>
+        #wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            /* justify-content: space-between; */
+            flex-wrap: wrap;
+        }
+        
+        .big {
+            display: inline-block;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            perspective: 900px;
+            margin: auto;
+            top: 25vh;
+        }
+        
+        .image-outside {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg);
+            position: absolute;
+        }
+        
+        .text {
+            background-color: pink;
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+        
+        .image-inside {
+            width: 250px;
+            height: 250px;
+            background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero.jpg);
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            transform-origin: 100% 50%;
+            transition: transform 0.5s ease-in;
+            z-index: 3;
+        }
+        
+        .big:hover .image-inside {
+            transform: rotateY(180deg);
+            z-index: 3;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <div id="wrapper">
+        <div class="big">
+            <div class="image-outside"> </div>
+            <div class="text">Make by Hieudz</div>
+            <div class="image-inside"></div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
